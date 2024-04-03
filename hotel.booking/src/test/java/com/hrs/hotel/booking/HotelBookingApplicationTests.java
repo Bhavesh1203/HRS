@@ -36,6 +36,7 @@ import com.hrs.hotel.booking.rest.response.AddBookingResponse;
 import com.hrs.hotel.booking.rest.response.CancelBookingResponse;
 import com.hrs.hotel.booking.rest.response.ViewBookingResponse;
 import com.hrs.hotel.booking.service.HotelBookingService;
+import com.hrs.hotel.booking.utils.HttpResponse;
 
 @SpringBootTest
 class HotelBookingApplicationTests {
@@ -89,7 +90,8 @@ class HotelBookingApplicationTests {
 		doReturn(roomOptional).when(roomRepository).findById(Mockito.anyLong());
 		
 		ResponseEntity<Object> response= hotelBookingService.addBooking(bookingRequest);
-		AddBookingResponse actualAddBookingResponse=(AddBookingResponse)response.getBody();
+		HttpResponse<Object> httpResponse=(HttpResponse<Object>)response.getBody();
+		AddBookingResponse actualAddBookingResponse=(AddBookingResponse)httpResponse.getResponseObject();
 		
 		assertTrue(expectedAddBookingResponse.equals(actualAddBookingResponse));
 	}
@@ -113,7 +115,8 @@ class HotelBookingApplicationTests {
 		doReturn(customerOptional).when(customerRepository).findById(Mockito.anyLong());
 		
 		ResponseEntity<Object> response=hotelBookingService.viewBooking(viewBookingRequest);
-		List<ViewBookingResponse> actualBookingResponseList=(List<ViewBookingResponse>)response.getBody();
+		HttpResponse<Object> httpResponse=(HttpResponse<Object>)response.getBody();
+		List<ViewBookingResponse> actualBookingResponseList=(List<ViewBookingResponse>)httpResponse.getResponseObject();
 		
 		assertTrue(expectedBookingResponseList.equals(actualBookingResponseList));
 	}
@@ -132,7 +135,8 @@ class HotelBookingApplicationTests {
 		doReturn(bookingOptional).when(bookingRepository).findById(Mockito.anyLong());
 		
 		ResponseEntity<Object> response=hotelBookingService.cancelBooking(cancelBookingRequest);
-		CancelBookingResponse actualCancelBookingResponse=(CancelBookingResponse)response.getBody();
+		HttpResponse<Object> httpResponse=(HttpResponse<Object>)response.getBody();
+		CancelBookingResponse actualCancelBookingResponse=(CancelBookingResponse)httpResponse.getResponseObject();
 		
 		assertTrue(actualCancelBookingResponse.equals(expectedCancelBookingResponse));
 		
