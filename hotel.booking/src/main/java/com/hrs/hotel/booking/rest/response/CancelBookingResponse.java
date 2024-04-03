@@ -2,6 +2,11 @@ package com.hrs.hotel.booking.rest.response;
 
 import java.util.Objects;
 
+/**
+ * CancelBookingRequest - This class represents a new cancel booking request.
+ * Json passed in as a request body to /cancelBooking end point will be converted to this Request class.
+ */
+
 public class CancelBookingResponse {
 
 	String hotelName;

@@ -27,7 +27,8 @@ import com.hrs.hotel.booking.rest.response.CancelBookingResponse;
 import com.hrs.hotel.booking.rest.response.ViewBookingResponse;
 
 /**
- * 
+ * This class provides services for HotelBooking
+ * This class is used in package com.hrs.hotel.booking.controller.HotelBookingController.
  */
 
 @Service
@@ -41,6 +42,7 @@ public class HotelBookingService implements HotelBookingManager{
 	HotelRepository hotelRepository;
 	@Autowired
 	RoomRepository roomRepository;
+	
 	
 	public ResponseEntity<Object> addBooking(AddBookingRequest addBookingRequest) {
 		Long customerId=addBookingRequest.getCustomerId();

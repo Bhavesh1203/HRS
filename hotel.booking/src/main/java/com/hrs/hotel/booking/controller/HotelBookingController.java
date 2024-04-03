@@ -16,7 +16,7 @@ import com.hrs.hotel.booking.utils.HotelBookingApplicationUtils;
 import jakarta.servlet.http.HttpServletRequest;
 
 /**
- * HotelBookingController:- This class provides the endpoints for the HotelBookingService
+ * HotelBookingController:- This class provides the endpoints for the HotelBookingService.
  */
 
 @RestController

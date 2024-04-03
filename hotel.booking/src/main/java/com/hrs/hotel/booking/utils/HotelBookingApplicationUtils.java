@@ -1,5 +1,7 @@
 package com.hrs.hotel.booking.utils;
-
+/**
+ * HotelBookingApplicationUtils - This is a utility class used to store the constants.
+ */
 public class HotelBookingApplicationUtils {
 
 	public static final String ENDPOINT_BASE="/api/hrs";

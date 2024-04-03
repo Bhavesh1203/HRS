@@ -2,6 +2,10 @@ package com.hrs.hotel.booking.rest.response;
 
 import java.util.Objects;
 
+/**
+ * ViewBookingRequest - This class represents a new booking request.
+ * Json passed in as a request body to /viewBookings end point will be converted to this Request class.
+ */
 public class ViewBookingResponse {
 	String hotelName;
 	String roomType;

@@ -1,5 +1,10 @@
 package com.hrs.hotel.booking.rest.request;
 
+/**
+ * AddBookingRequest - This class represents a new add booking request.
+ * Json passed in as a request body to /addBooking end point will be converted to this Request class.
+ */
+
 public class AddBookingRequest {
 	Long customerId;
 	Long roomId;
